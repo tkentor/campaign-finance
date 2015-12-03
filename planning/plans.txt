@@ -1,0 +1,33 @@
+Trello user story:
+https://trello.com/b/VvLGFT5m/campaign-finance
+
+
+Models
+Candidates
+	Name
+	Headshot
+  Party
+  Current Job
+  Total Contributions
+  Net Worth
+
+Donors
+	Name
+	State
+	Individual / PAC donors disclosed / PAC dark money
+  Contribution Amount
+	Contribution Date
+	Contributed To
+
+User
+
+User Stories
+Bronze - As a logged-in user, I want to be able to add candidates as they enter the race.
+B- As a logged-in user, I want to be able to edit candidates as their status changes.
+B - As a logged-in user, I want to be able to delete candidates as their messages tank and they drop out.
+B - As a logged-in user, I want to be able to add donors when they contribute to a candidate.
+B - As a logged-in user, I want to be able to edit donors to fix errors.
+B - As a logged-in user, I want to be able to delete donors when their contributions are illegal.
+B - As a viewer, I shouldn’t be able to modify data.
+B - As a viewer, I want to be able to see a list of candidates so I can see a list of donors.
+B - As a viewer, I want to change the view to only display certain candidates.
