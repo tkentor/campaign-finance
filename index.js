@@ -15,6 +15,8 @@ app.set("view engine", "hbs");
 app.get('/', candidatesController.index);
 app.get('/candidates', candidatesController.index);
 
+app.get('/candidates/:id', candidatesController.show);
+
 //port listening at local hosting 3000
 app.listen(3000, function(){
   console.log("app listening on port 3000");

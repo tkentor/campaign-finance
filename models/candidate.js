@@ -9,7 +9,9 @@ var candidates = [
   ["Carly Fiorina", "R"],
   ["Ted Cruz", "R"],
   ["Rand Paul", "R"],
-  ["Chris Christie", "R"]
+  ["Chris Christie", "R"],
+  ["John Kasich", "R"],
+  ["Mike Huckabee", "R"]
 ];
 
 function Candidate(){
