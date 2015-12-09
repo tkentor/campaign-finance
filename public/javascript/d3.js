@@ -2,4 +2,4 @@
 //       d3.select("body").append("p").text("New paragraph!");
 // };
 
-var dataset = [ 5, 10, 15, 20, 25 ];
+var dataset = [ 1000, 100, 5000, 2000, 250 ];

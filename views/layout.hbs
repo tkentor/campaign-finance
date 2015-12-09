@@ -41,24 +41,42 @@
    <script>
 
 
+// document.getElementById("button-1").onclick=function(){
+//   d3.select("body")
+//     .data(dataset)
+//     .enter()
+//     .append("svg")
+//     .append("circle")
+//     .attr("cx", 1)
+//     .attr("cy", 1)
+//     .attr("r", 1)
+//     .style("fill", "purple")
+//     .style("cx", function(d) {
+//     return d})
+//     .style("cy", function(d) {
+//     return d})
+//     .style("r", function(d) {
+//     return d
+//   })
+// }
+
 document.getElementById("button-1").onclick=function(){
-  d3.select("body")
-    .data(dataset)
-    .enter()
-    .append("svg")
-    .append("circle")
-    .attr("cx", 1)
-    .attr("cy", 1)
-    .attr("r", 1)
-    .style("fill", "purple")
-    .style("cx", function(d) {
-    return d})
-    .style("cy", function(d) {
-    return d})
-    .style("r", function(d) {
-    return d
-  })
-}
+var width = 800,
+    height = 800;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+
+
+
+var g = svg.append("g");
+
+var img = g.append("svg:image")
+    .attr("xlink:href", "http://imgh.us/hillary.svg")
+    .attr("width", 200)
+    .attr("height", 200)
+  }
 
    </script>
   </body>
