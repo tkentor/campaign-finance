@@ -8,9 +8,10 @@ var candidatesController = require("./controllers/candidatesController");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+
 //setting a view handler
 app.set("view engine", "hbs");
-
+app.use(express.static(__dirname + '/public'))
 
 app.get('/', candidatesController.index);
 app.get('/candidates', candidatesController.index);
