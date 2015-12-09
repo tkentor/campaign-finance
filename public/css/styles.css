@@ -67,6 +67,35 @@ img{
   display: block;
 }
 
+.button{
+  color: red;
+  width: 29.4%;
+  padding: 2%;
+  font-size: 3vw;
+  color: white;
+  background-color: rgba(33,108,42,.7);
+  font-family: Oswald;
+  border: 10px solid rgb(222,184,135);;
+  box-shadow: 2px 2px 2px black;
+}
+
+#button-2{
+  margin: 0 5% 0 5%;
+}
+
+.animals{
+  width: 49%;
+  text-align: center;
+}
+
+#flag{
+  width: 100%;
+}
+
+#flag-2{
+  width: 100%;
+}
+
 @media (min-width: 800px){
   h1{
     font-size: 4vw;
