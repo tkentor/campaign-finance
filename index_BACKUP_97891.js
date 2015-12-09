@@ -10,7 +10,13 @@ var env=require('./env');
 
 // establish database connection to mongoDB
 mongoose.connect('mongodb://localhost/project3');
+=======
+var bodyParser = require('body-parser');
+var candidatesController = require("./controllers/candidatesController");
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+>>>>>>> 4d4cb1db14ae70aec06dca03bf588900414bd825
 
 //setting a view handler
 app.set("view engine", "hbs");
@@ -37,7 +43,14 @@ request("http://api.nytimes.com/svc/elections/us/v3/finances/2016/president/tota
 //
 // app.get("/", candidates_controller.index);
 //
+=======
 
+app.get('/', candidatesController.index);
+app.get('/candidates', candidatesController.index);
+
+app.get('/candidates/:id', candidatesController.show);
+
+>>>>>>> 4d4cb1db14ae70aec06dca03bf588900414bd825
 //port listening at local hosting 3000
 app.listen(3000, function(){
   console.log("app listening on port 3000");
