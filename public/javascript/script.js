@@ -1,7 +1,11 @@
 $(document).ready(function() {
 
-  $("#hillary").click(function() {
-    console.log("working");
+  $(function() {
+      $(".financials").hide();
+  });
+
+  $(".faces").click(function() {
+    $(".financials").show("slow");
   });
 
 });
