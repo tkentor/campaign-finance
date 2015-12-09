@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 
   $(function() {
@@ -14,7 +16,6 @@ $(document).ready(function() {
   $("#button-1").click(function() {
     $(".animals").hide();
     $("#flag-2").hide();
-    $("#flag").show("slow");
   });
 
   $("#button-2").click(function() {

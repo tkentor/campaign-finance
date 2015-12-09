@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <meta charset="utf-8">
+    <script src="javascript/d3.v3.js"></script>
+    <script src="javascript/d3.js"></script>
     <script src="javascript/script.js"></script>
     <h1>CAMPAIGN FINANCE</h1>
   </head>
@@ -35,5 +38,28 @@
    <img src="http://i.imgur.com/0ToNnON.png" class="animals" id="elephant">
    <img src="http://i.imgur.com/T9vl8ZX.png" class="animals" id="donkey">
    <img src="http://images.all-free-download.com/images/graphiclarge/jp_draws_us_flag_clip_art_14610.jpg" id="flag-2">
+   <script>
+
+
+document.getElementById("button-1").onclick=function(){
+  d3.select("body")
+    .data(dataset)
+    .enter()
+    .append("svg")
+    .append("circle")
+    .attr("cx", 1)
+    .attr("cy", 1)
+    .attr("r", 1)
+    .style("fill", "purple")
+    .style("cx", function(d) {
+    return d})
+    .style("cy", function(d) {
+    return d})
+    .style("r", function(d) {
+    return d
+  })
+}
+
+   </script>
   </body>
 </html>
