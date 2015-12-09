@@ -1,27 +1,31 @@
 var request=require('request');
 var env=require('../env');
+var express = require("express");
+var app = express();
+
+app.use(express.static(__dirname + "/public"));
 
 
-function home(req, res){
-
-  var info;
+function fetchData(req, res){
   request("http://api.nytimes.com/svc/elections/us/v3/finances/2016/president/totals.json?api-key="+env.api_key+"", function(error, response, body){
     if(!error && response.statusCode ==200){
-      // var candidates=[];
-      // info=body;
-      // candidates.push(response.body.results);
-      // console.log(candidates);
-      // console.log(info.results);
-      // console.log(candidates);
-      res.render('./candidates/index', {body});
+      var candidates=JSON.parse(body).results;
+      res.json(candidates);
     }
   });
+};
 
-  // for(var i=0; i<candidates.length; i++){
+function home(req, res){
+  var candidates=req.fetchData;
+  res.redirect('./candidates/index');
+};
 
-  // }
-}
+function index(req, res){
+  res.send('index.html');
+};
 
 module.exports = {
-  home: home
+  fetchData: fetchData,
+  home: home,
+  index: index
 }

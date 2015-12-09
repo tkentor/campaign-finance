@@ -12,8 +12,11 @@ mongoose.connect('mongodb://localhost/project3');
 
 //setting a view handler
 app.set("view engine", "hbs");
-// app.use(express.static(__dirname + "/public"));
 
+app.use(express.static(__dirname + "/public"));
+app.get("/", function(req, res){
+  res.render("index.html");
+});
 
 var routes=require('./config/routes');
 app.use(routes);
