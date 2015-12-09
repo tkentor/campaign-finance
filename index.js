@@ -2,7 +2,7 @@
 //using express as frame work
 var express = require("express");
 var app = express();
-<<<<<<< HEAD
+
 var request=require('request');
 var mongoose=require('mongoose');
 var passport=require('passport');
@@ -25,13 +25,11 @@ app.get("/", function(req, res){
 var routes=require('./config/routes');
 app.use(routes);
 
->>>>>>> 282e6dcd0c7a2ffead376acd8a397ec23f5eeea4
 
 // app.get("/", function(req, res){
 //   res.render("index.html");
 // });
 
-<<<<<<< HEAD
 // var candidates_controller=require("./controllers/candidates_controller");
 //
 //
